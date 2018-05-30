@@ -8,14 +8,14 @@ function validaFormulario(paciente){
         return paciente.getIdade();
     }
 
-    if(paciente.getAltura().value == ''){
-         return paciente.getAltura();
-    }
-
     if(paciente.getPeso().value == ''){
         paciente.getPeso().focus();
         return paciente.getPeso();
     }
+
+    if(paciente.getAltura().value == ''){
+         return paciente.getAltura();
+    }   
 
     return false;
     
