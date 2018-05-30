@@ -19,6 +19,9 @@ btn.addEventListener("click",function(event){
     }else{
         let alerta = validaFormulario(paciente);
         alerta.focus();
+        let msg = document.querySelector(".msg-erro");
+
+        msg.innerHTML = "Necessário preencher todos os campos!";
         //alert("Necessário preencher todos os campos!");
         //Gera mensagem de erro e posiona cursos no campo que nnão está conforme.
     }
