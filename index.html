@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-12">
+            <h3 class="text text-center">Inserir Paciente</h3>
+            <form class="form" name="formulario" action="">
+                <fieldset>
+                    <label for="">Nome</label>
+                    <input class="form-control" type="text" id="nome">
+                    <label for="">Idade</label>
+                    <input class="form-control" type="number" id="idade">
+                    <label for="">Peso</label>
+                    <input class="form-control" type="number" id="peso">
+                    <label for="">Altura</label>
+                    <input class="form-control" type="text" id="altura"><br>
+                    <button class="btn btn-default" id="executa">INSERIR E CALCULAR</button>
+                </fieldset>
+            </form>
+            <hr>
+            <h3 class="text text-center">Calculo IMC</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Idade</th>
+                        <th>Peso</th>
+                        <th>Altura</th>
+                        <th>IMC</th>
+                    </tr>
+                </thead>
+                <tbody class="corpo">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="Paciente.js"></script>
+    <script src="pega-dados.js"></script>
+    <script src="valida-form.js"></script>
+</body>
+</html>
