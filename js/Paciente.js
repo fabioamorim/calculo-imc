@@ -4,9 +4,9 @@ class Paciente{
 
         this.nome = nome,
         this.idade = idade,
-        this.peso = peso
+        this.peso = peso,
         this.altura = altura,        
-        this.imc = (peso/(altura*altura));
+        this.imc = (peso.value/(altura.value*altura.value));
 
     }
 /*

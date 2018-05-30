@@ -1,12 +1,21 @@
-function validaFormulario(cliente){
+function validaFormulario(paciente){
 
-    if(cliente.getNome() == '') return true;
+    if(paciente.getNome().value == ''){
+        return paciente.getNome();
+    } 
    
-    if(cliente.getIdade() == '') return true;
+    if(paciente.getIdade().value == ''){
+        return paciente.getIdade();
+    }
 
-    if(cliente.getAltura() == '') return true;
+    if(paciente.getAltura().value == ''){
+         return paciente.getAltura();
+    }
 
-    if(cliente.getPeso()== '') return true;
+    if(paciente.getPeso().value == ''){
+        paciente.getPeso().focus();
+        return paciente.getPeso();
+    }
 
     return false;
     

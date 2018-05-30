@@ -5,19 +5,21 @@ btn.addEventListener("click",function(event){
 
     event.preventDefault();
 
-    let nome =  document.querySelector("#nome").value;
-    let idade = document.querySelector("#idade").value;
-    let peso =  document.querySelector("#peso").value;
-    let altura = document.querySelector("#altura").value;
+    let nome =  document.querySelector("#nome");
+    let idade = document.querySelector("#idade");
+    let peso =  document.querySelector("#peso");
+    let altura = document.querySelector("#altura");
 
     const paciente = new Paciente(nome,idade,peso,altura);
     
     //Valida informações do formulário
     if(!validaFormulario(paciente)){
         inseriNaTabela(paciente);
-        limpaFormulario();
+        limpaFormulario(paciente);
     }else{
-        alert("Necessário preencher todos os campos!");
+        let alerta = validaFormulario(paciente);
+        alerta.focus();
+        //alert("Necessário preencher todos os campos!");
         //Gera mensagem de erro e posiona cursos no campo que nnão está conforme.
     }
 
@@ -28,19 +30,19 @@ const inseriNaTabela = function(paciente){
     var tr = document.createElement('tr');
 
     let td = document.createElement('td');
-        td.textContent = paciente.nome;
+        td.textContent = paciente.getNome().value;
         tr.appendChild(td);
 
         td = document.createElement('td');
-        td.textContent = paciente.idade;
+        td.textContent = paciente.getIdade().value;
         tr.appendChild(td);
 
         td = document.createElement('td');
-        td.textContent = paciente.peso;
+        td.textContent = paciente.getPeso().value;
         tr.appendChild(td);
 
         td = document.createElement('td');
-        td.textContent = paciente.altura;
+        td.textContent = paciente.getAltura().value;
         tr.appendChild(td);
 
         td = document.createElement('td');
@@ -53,12 +55,10 @@ const inseriNaTabela = function(paciente){
 
 }
 
-
-
-function limpaFormulario() {
-    document.querySelector("#nome").value = "";
-    document.querySelector("#idade").value = "";
-    document.querySelector("#peso").value = "";
-    document.querySelector("#altura").value = "";
+function limpaFormulario(paciente) {
+    paciente.getNome().value = "";
+    paciente.getIdade().value = "";
+    paciente.getPeso().value = "";
+    paciente.getAltura().value = "";
 }
 
