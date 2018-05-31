@@ -1,7 +1,13 @@
 
-const btn = document.querySelector("#executa");
+const btnExecuta = document.querySelector("#executa");
 
-btn.addEventListener("click",function(event){    
+const btnLimpaTabela = document.querySelector("#limpa-tabela");
+
+btnLimpaTabela.addEventListener("click",function(){
+    document.onload();
+});
+
+btnExecuta.addEventListener("click",function(event){    
 
     event.preventDefault();
 
