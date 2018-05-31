@@ -10,16 +10,18 @@ btn.addEventListener("click",function(event){
     let peso =  document.querySelector("#peso");
     let altura = document.querySelector("#altura");
 
+    let msg = document.querySelector(".msg-erro");
+
     const paciente = new Paciente(nome,idade,peso,altura);
     
     //Valida informações do formulário
     if(!validaFormulario(paciente)){
         inseriNaTabela(paciente);
         limpaFormulario(paciente);
+        msg.innerHTML = "";        
     }else{
         let alerta = validaFormulario(paciente);
-        alerta.focus();
-        let msg = document.querySelector(".msg-erro");
+        alerta.focus();    
 
         msg.innerHTML = "Necessário preencher todos os campos!";
         //alert("Necessário preencher todos os campos!");
