@@ -1,20 +1,19 @@
 function validaFormulario(paciente){
 
-    if(paciente.getNome().value == ''){
-        return paciente.getNome();
+    if(paciente.nome.value == ''){
+        return paciente.nome;
     } 
    
-    if(paciente.getIdade().value == ''){
-        return paciente.getIdade();
+    if(paciente.idade.value == ''){
+        return paciente.idade;
     }
 
-    if(paciente.getPeso().value == ''){
-        paciente.getPeso().focus();
-        return paciente.getPeso();
+    if(paciente.peso.value == ''){
+        return paciente.peso;
     }
 
-    if(paciente.getAltura().value == ''){
-         return paciente.getAltura();
+    if(paciente.altura.value == ''){
+         return paciente.altura;
     }   
 
     return false;

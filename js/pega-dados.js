@@ -41,23 +41,23 @@ const inseriNaTabela = function(paciente){
     var tr = document.createElement('tr');
 
     let td = document.createElement('td');
-        td.textContent = paciente.getNome().value;
+        td.textContent = paciente.nome.value;
         tr.appendChild(td);
 
         td = document.createElement('td');
-        td.textContent = paciente.getIdade().value;
+        td.textContent = paciente.idade.value;
         tr.appendChild(td);
 
         td = document.createElement('td');
-        td.textContent = paciente.getPeso().value;
+        td.textContent = paciente.peso.value;
         tr.appendChild(td);
 
         td = document.createElement('td');
-        td.textContent = paciente.getAltura().value;
+        td.textContent = paciente.altura.value;
         tr.appendChild(td);
 
         td = document.createElement('td');
-        td.textContent = paciente.getImc();
+        td.textContent = paciente.imc;
         tr.appendChild(td);
 
     var tbody = document.querySelector(".corpo");
@@ -67,9 +67,9 @@ const inseriNaTabela = function(paciente){
 }
 
 function limpaFormulario(paciente) {
-    paciente.getNome().value = "";
-    paciente.getIdade().value = "";
-    paciente.getPeso().value = "";
-    paciente.getAltura().value = "";
+    paciente.nome.value = "";
+    paciente.idade.value = "";
+    paciente.peso.value = "";
+    paciente.altura.value = "";
 }
 
