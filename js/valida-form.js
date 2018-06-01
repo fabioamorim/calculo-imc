@@ -1,18 +1,20 @@
 function validaFormulario(paciente){
 
-    if(paciente.nome.value == ''){
+    let espacoEmBranco = /\W+.*\W+/; // Expressão regular que identifica se há algum texto no input
+
+    if(espacoEmBranco.test(paciente.nome.value)){
         return paciente.nome;
     } 
    
-    if(paciente.idade.value == ''){
+    if(espacoEmBranco.test(paciente.idade.value)){
         return paciente.idade;
     }
 
-    if(paciente.peso.value == ''){
+    if(espacoEmBranco.test(paciente.peso.value)){
         return paciente.peso;
     }
 
-    if(paciente.altura.value == ''){
+    if(espacoEmBranco.test(paciente.altura.value)){
          return paciente.altura;
     }   
 
