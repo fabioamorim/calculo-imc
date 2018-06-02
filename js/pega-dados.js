@@ -16,8 +16,6 @@ btnExecuta.addEventListener("click",function(event){
     let peso =  document.querySelector("#peso");
     let altura = document.querySelector("#altura");
 
-    let msg = document.querySelector(".msg-erro");
-
     const paciente = new Paciente(nome,idade,peso,altura);
     
     //Valida informações do formulário
@@ -28,8 +26,6 @@ btnExecuta.addEventListener("click",function(event){
     }else{
         let alerta = validaFormulario(paciente);
         alerta.focus();    
-
-        msg.innerHTML = "Necessário preencher todos os campos!";
         //alert("Necessário preencher todos os campos!");
         //Gera mensagem de erro e posiona cursos no campo que nnão está conforme.
     }
